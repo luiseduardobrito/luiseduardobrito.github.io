@@ -1,70 +1,145 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="resumeApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Luís Eduardo Brito - TI e Desenvolvimento</title>
+<meta name="description" content="Luís Eduardo Brito - TI e Desenvolvimento">
+<meta name="author" content="luiseduardobrito.github.io">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Adds Support for HTML5 on IE6 - IE9 -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- Font Awesome by Dave Gandy - http://fontawesome.io/ -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:700' rel='stylesheet' type='text/css'>
+<!-- FlexSlider by wooThemes - http://www.woothemes.com/flexslider/ -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<!-- Main Stylesheets -->
+<link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
+<link rel="stylesheet" href="css/responsive_stylesheet.css" type="text/css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+<div id="header_wrap">
+	<!-- Logo (LEFT) -->
+	<div id="logo">
+		<a href="#!/" class="logo-text" title="Luís Eduardo Brito">luiseduardobrito</a>
+	</div>
+	<!-- Navigation (RIGHT) -->
+	<div id="navigation">
+		<!-- Responsive Layout Only -->
+		<div class="navigation_title">
+			<i class="fa fa-bars"></i> MENU
+		</div>
+		<!-- Nav Bar (LEFT) -->
+		<nav>
+		<ul>
+			<li><a href="index.html" class="nav_link" id="nav_current" title="Home">Home</a></li>
+			<li><a href="archive.html" class="nav_link" title="Archive">Archive</a></li>
+			<li><a href="#!/contact" class="nav_link" title="Contact">Contact</a></li>
+		</ul>
+		</nav>
+		<!-- Responsive Layout Only -->
+		<nav>
+		<div class="navigation_title">
+			<i class="fa fa-info"></i>Other
+		</div>
+		<ul>
+			<li><a href="#" class="nav_link_other" title="New Blog Post">New Blog Post</a></li>
+			<li><a href="#" class="nav_link_other" title="Social Media">Social Media</a></li>
+		</ul>
+		</nav>
+	</div>
+</div>
+</header>
+<!-- Subheader -->
+<header id="subheader">
+<div id="subheader_wrap">
+	<!-- Icon Background -->
+	<div id="icon_border">
+	</div>
+</div>
+</header>
+<!-- Main Content -->
+<section id="content">
+<!-- Icon -->
+<div id="icon_wrap">
+	<!-- Icon Image can be modified in #Icon CSS Rule -->
+	<div id="icon">
+		<a href="#" title="Icon">
+		<div id="icon_link">
+		</div>
+		</a>
+	</div>
+</div>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!-- Content Wrap -->
+<div id="content_wrap" ng-view></div>
 
-    <title>Luis Eduardo Brito - GitHub by luiseduardobrito</title>
-  </head>
+<!-- Pagination/Social Media -->
+<footer id="page_footer">
+<!-- Blog Post Button -->
+<a href="#" title="New Blog Post">
+<div id="new_post">
+	New Blog Post
+</div>
+</a>
+<!-- Social Media -->
+<div id="social_media">
+	<ul>
+		<li><a href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a></li>
+		<li><a href="#" class="twitter"><i class="fa fa-twitter fa-lg"></i></a></li>
+		<li><a href="#" class="google_plus"><i class="fa fa-google-plus fa-lg"></i></a></li>
+		<li><a href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a></li>
+		<li><a href="#" class="dribbble"><i class="fa fa-dribbble fa-lg"></i></a></li>
+		<li><a href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a></li>
+		<li><a href="#" class="youtube"><i class="fa fa-youtube-play fa-lg"></i></a></li>
+		<li><a href="#" class="pinterest"><i class="fa fa-pinterest fa-lg"></i></a></li>
+	</ul>
+</div>
+</footer>
+<footer id="footer_banner">
+<div id="footer_banner_wrap">
+	&#169; Copyright Arctic 2013
+</div>
+</footer>
+</section>
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Luis Eduardo Brito</h1>
-        <h2>Personal coding page.</h2>
-        <a href="https://github.com/luiseduardobrito" class="button"><small>Follow me on</small>GitHub</a>
-      </div>
-    </header>
+<!-- jQuery - http://jquery.com/ -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>Ongoing Projects.</h3>
-          <p><ul>
-            <li><a href="http://cloudbot.io">cloudbot.io</a> - automated cloud services</li>
-            <li><a href="http://speakr.fm">speakr.fm</a> - social playlists.</li>
-            <li><a href="https://github.com/luiseduardobrito/OpenRefine">GPNX Refine</a> - custom OpenRefine distribution.</li>
-          </ul></p>
+<!-- Firebase - http://firebase.com/ -->
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
 
-          <h3>Scripts and other cool creations</h3>
-          <p><ul>
-          <li><a href="http://github.com/luiseduardobrito/gmailerpy">gmailer.py</a> - simple bulk sending using python and gmail</li>
-          </ul></p>
-          
-          <h3>About me</h3>
+<!-- AngularJS - http://angularjs.com/ -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-route.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
 
-          <p>Brazilian, music addicted, coffee powered, studying Computer Engineer at Campinas State University, in Campinas, São Paulo, Brazil (UNICAMP).</p>
+<!-- Blur.js - https://github.com/jakiestfu/Blur.js -->
+<script type="text/javascript" src="js/blur.min.js"></script>
 
-          <p>
-            Interest areas:<br />
-            <ul>
-              <li>Cloud services</li>
-              <li>Javascript, Node.js and jQuery</li>
-              <li>Python</li>
-              <li>PHP</li>
-            </ul>
-          </p>
+<!-- FlexSlider -->
+<script src="js/jquery.flexslider-min.js"></script>
 
-          <h3>Support or Contact</h3>
+<!-- EpicEditor - Markdown Editor -->
+<script src="lib/epiceditor.min.js"></script>
 
-          <p>Having trouble? Or just want to contact me? <a href="mailto:luiseduardo14@gmail.com">luiseduardo14 [at] gmail [dot] com</a> or contact me via <a href="http://twitter.com/z0rakk">Twitter</a>.</p>
-        </section>
+<!-- PageDown - Markdown to HTML Converter -->
+<script src="lib/md-converter.js"></script>
 
-        <aside id="sidebar">
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
+<!-- Custom Javascript -->
+<script src="js/custom.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+<script src="js/directives.js"></script>
+</body>
 </html>

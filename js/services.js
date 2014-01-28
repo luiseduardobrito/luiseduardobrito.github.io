@@ -1,0 +1,1 @@
+var resumeServices = angular.module("resumeApp.services", []);

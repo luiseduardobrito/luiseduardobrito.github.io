@@ -1,0 +1,47 @@
+<!-- Contact Content -->
+<article class="post">
+
+    <section class="post_content">
+    
+        <!-- Header -->
+        <div class="post_header">
+        
+            <!-- Title -->
+            <div class="post_title">Create Post</div>
+                           
+        </div>
+        
+        <!-- Body -->
+        <div class="post_body">
+            
+            <!-- Contact Form -->
+            <form id="new_post">
+                                                                                
+                <input type="text" ng-model="post.title" placeholder="Post Title" class="contact_name" />
+                <input type="text" ng-model="post.tags" placeholder="Tags" class="contact_website" />
+
+                <select ng-model="post.type" class="contact_name" value="Post Type">
+                    <option value="text" selected>Markdown Text</option>
+                    <option value="image">Image + Markdown Text</option>
+                    <option value="video">Video + Markdown Text</option>
+                </select>
+
+                <input ng-if="post.type == 'image'" type="text" ng-model="post.image" placeholder="Post Image URL" class="contact_name"/>
+
+                <textarea ng-if="post.type == 'video'" ng-model="post.video" placeholder="Post Video HTML" class="contact_message"/>
+
+                <p>Post Body (Markdown): </p>
+
+                <textarea ng-model="post.content" data-markdown-editor></textarea>
+
+                <p>&nbsp;</p>
+
+                <input type="button" ng-click="create()" value="Create" class="contact_button" />
+                
+            </form>
+            
+        </div>
+    
+    </section>
+    
+</article>

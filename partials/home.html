@@ -1,0 +1,111 @@
+<!-- Top Categories -->
+<div class="categories">
+    <nav>
+    <ul>
+        <li><a href="#" class="categories_link" id="current_categories" title="All">All</a></li>
+        <li><a href="#" class="categories_link" title="JavaScript">JavaScript</a></li>
+        <li><a href="#" class="categories_link" title="NodeJS">NodeJS</a></li>
+        <li><a href="#" class="categories_link" title="Android">Android</a></li>
+        <li><a href="#" class="categories_link" title="Linux">Linux</a></li>
+        <li><a href="#" class="categories_link" title="Linux">Raspberry Pi</a></li>
+        <li><a href="#" class="categories_link" title="Linux">Chrome Apps</a></li>
+        <li><a href="#" class="categories_link" title="Linux">ChromeOS</a></li>
+        <li><a href="#" class="categories_link" title="Linux">ChromeCast</a></li>
+        <li><a class="categories_link" id="more"><i class="fa fa-angle-double-down fa-lg" id="sort_down"></i></a></li>
+    </ul>
+    </nav>
+</div>
+<!-- Unlisted Categories - Press "#more" to show -->
+<div id="categories_unlisted" class="categories">
+    <nav>
+    <ul>
+        <li><a href="#" class="categories_link" title="Books">Books</a></li>
+        <li><a href="#" class="categories_link" title="Opinion">Opinion</a></li>
+        <li><a href="#" class="categories_link" title="Vacation">Vacation</a></li>
+        <li><a href="#" class="categories_link" title="Work">Work</a></li>
+    </ul>
+    </nav>
+</div>
+
+<!-- Post #1 -->
+<article class="post" ng-repeat="article in articles">
+
+    <!-- Post Media - Single Image -->
+    <section class="post_media" ng-if="article.type == 'image' || article.type == 'video'">
+
+        <!-- Post Media Image -->
+        <div ng-if="article.image" class="post_type" id="photo"></div>
+        <img ng-if="article.image" ng-src="article.image" alt="article.title"/>
+
+        <!-- Post Media Video -->
+        <div ng-if="article.video" class="post_type" id="video"></div>
+        <div ng-if="article.video" ng-model="article.video"></div>
+
+    </section>
+
+    <!-- Post Content - Text -->
+    <section class="post_content">
+
+        <!-- Post Header -->
+        <header class="post_header">
+
+            <!-- Post Title -->
+            <div class="post_title"><a href="post_image.html">{{ article.title }}</a></div>
+
+            <!-- Post Header -->
+            <div class="post_date">{{ article.date }}</div>
+
+        </header>
+
+        <!-- Post Body -->
+        <div class="post_body">
+            <p ng-bind-html="mdToHtml(article.content)"></p>
+            <p>&nbsp;</p>
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post_footer">
+
+            <div class="post_footer_left">
+
+                <!-- Read More Button-->
+                <a href="post_image.html" title="Read More"><div class="post_read_more_pad"><div class="post_read_more">Read More</div></div></a>
+
+                <!-- User/Comment/Favorite Icons -->
+                <div class="post_comment_icons">
+                    <ul>
+                        <li><a href="post_image.html" class="user_icon" title="Users"><i class="fa fa-user"></i>291</a></li>
+                        <li><a href="post_image.html" class="comment_icon" title="Comments"><i class="fa fa-comment"></i>0</a></li>
+                        <li><a href="post_image.html" class="heart_icon" title="Favorites"><i class="fa fa-heart"></i>60</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Buttons -->
+            <div class="post_social_media">
+                <a href="#" class="share_facebook" title="Share on Facebook"><i class="fa fa-thumbs-up"></i>Share</a>
+                <a href="#" class="share_twitter" title="Share on Twitter"><i class="fa fa-twitter"></i>Tweet</a>
+            </div>
+
+        </footer>
+
+    </section>
+
+</article>
+
+<nav id="pagination">
+<!-- Footer Navigation -->
+<ul>
+    <li><a href="#" class="pagination_link" id="left"><i class="fa fa-angle-double-left"></i> Previous</a></li>
+</ul>
+<ul>
+    <li><a href="#" class="pagination_link">1</a></li>
+    <li><a href="#" class="pagination_link" id="current_page">2</a></li>
+    <li><a href="#" class="pagination_link">3</a></li>
+    <li>...</li>
+    <li><a href="#" class="pagination_link">18</a></li>
+</ul>
+<ul>
+    <li><a href="#" class="pagination_link">Next <i class="fa fa-angle-double-right"></i></a></li>
+</ul>
+</nav>
