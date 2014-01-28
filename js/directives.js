@@ -13,7 +13,8 @@ resumeDirectives.directive('markdownEditor', function() {
 
                 file:{
                     autoSave:false
-                }
+                },
+                clientSideStorage: false
                 /*
                 basePath: 'epiceditor',
                 localStorageName: 'epiceditor',
