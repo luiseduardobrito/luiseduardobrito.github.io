@@ -1,10 +1,17 @@
 <!-- Top Categories -->
-<div class="categories">
-    <nav>
+<div class="categories" style="text-align: center">
+    <nav style="float: none">
     <ul>
-        <li><a href="javascript:;" class="categories_link" id="current_categories" title="Todas">Todas</a></li>
-        <li><a ng-repeat="tag in tags" href="javascript:;" class="categories_link" id="current_categories" title="{{ tag }}">{{ tag }}</a></li>
-        <li><a class="categories_link" id="more"><i class="fa fa-angle-double-down fa-lg" id="sort_down"></i></a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="javascript">javascript</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="nodejs">nodejs</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="angularjs">angularjs</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="android">android</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="android">php</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="chromeOS">chromeOS</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="phonegap">phonegap</a></li>
+        <li><a href="javascript:;" class="categories_link" id="current_categories" title="chromecast">chromecast</a></li>
+
+        <!--<li><a ng-repeat="tag in tags" href="javascript:;" class="categories_link" id="current_categories" title="{{ tag }}">{{ tag }}</a></li>-->
     </ul>
     </nav>
 </div>
@@ -16,6 +23,7 @@
         <li><a href="#" class="categories_link" title="Opinion">Opinion</a></li>
         <li><a href="#" class="categories_link" title="Vacation">Vacation</a></li>
         <li><a href="#" class="categories_link" title="Work">Work</a></li>
+        <li><a class="categories_link" id="more"><i class="fa fa-angle-double-down fa-lg" id="sort_down"></i></a></li>
     </ul>
     </nav>
 </div>
@@ -76,8 +84,7 @@
 
             <!-- Social Media Buttons -->
             <div class="post_social_media">
-                <a href="#" class="share_facebook" title="Share on Facebook"><i class="fa fa-thumbs-up"></i>Share</a>
-                <a href="#" class="share_twitter" title="Share on Twitter"><i class="fa fa-twitter"></i>Tweet</a>
+                <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button"></div>
             </div>
 
         </footer>
@@ -86,7 +93,7 @@
 
 </article>
 
-<nav id="pagination">
+<nav id="pagination" style="display: none">
 <!-- Footer Navigation -->
 <ul>
     <li><a href="#" class="pagination_link" id="left"><i class="fa fa-angle-double-left"></i> Previous</a></li>

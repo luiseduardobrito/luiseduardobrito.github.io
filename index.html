@@ -39,11 +39,11 @@
 		</div>
 		<!-- Nav Bar (LEFT) -->
 		<nav>
-		<ul>
-			<li><a href="index.html" class="nav_link" id="nav_current" title="Home">Home</a></li>
-			<li><a href="archive.html" class="nav_link" title="Archive">Archive</a></li>
-			<li><a href="#!/contact" class="nav_link" title="Contact">Contact</a></li>
-		</ul>
+			<ul>
+				<li><a href="index.html" class="nav_link" id="nav_current" title="Home">Home</a></li>
+				<li><a href="archive.html" class="nav_link" title="Archive">Archive</a></li>
+				<li><a href="#!/contact" class="nav_link" title="Contact">Contact</a></li>
+			</ul>
 		</nav>
 		<!-- Responsive Layout Only -->
 		<nav>
@@ -73,9 +73,18 @@
 	<!-- Icon Image can be modified in #Icon CSS Rule -->
 	<div id="icon">
 		<a href="#" title="Icon">
-		<div id="icon_link">
-		</div>
+			<div id="icon_link"></div>
 		</a>
+	</div>
+
+	<!-- Social Media -->
+	<div id="social_media">
+		<ul>
+			<li><a href="https://plus.google.com/u/0/+LuisEduardoBrito" target="_blank" class="google_plus"><i class="fa fa-google-plus fa-lg"></i></a></li>
+			<li><a href="http://br.linkedin.com/in/luiseduardobrito/" target="_blank" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a></li>
+			<li><a href="https://twitter.com/z0rakk" target="_blank" class="twitter"><i class="fa fa-twitter fa-lg"></i></a></li>
+			<li><a href="http://fb.com/luiseduardo14" target="_blank" class="facebook"><i class="fa fa-facebook fa-lg"></i></a></li>
+		</ul>
 	</div>
 </div>
 
@@ -83,30 +92,9 @@
 <div id="content_wrap" ng-view></div>
 
 <!-- Pagination/Social Media -->
-<footer id="page_footer">
-<!-- Blog Post Button -->
-<a href="#" title="New Blog Post">
-<div id="new_post">
-	New Blog Post
-</div>
-</a>
-<!-- Social Media -->
-<div id="social_media">
-	<ul>
-		<li><a href="#" class="facebook"><i class="fa fa-facebook fa-lg"></i></a></li>
-		<li><a href="#" class="twitter"><i class="fa fa-twitter fa-lg"></i></a></li>
-		<li><a href="#" class="google_plus"><i class="fa fa-google-plus fa-lg"></i></a></li>
-		<li><a href="#" class="linkedin"><i class="fa fa-linkedin fa-lg"></i></a></li>
-		<li><a href="#" class="dribbble"><i class="fa fa-dribbble fa-lg"></i></a></li>
-		<li><a href="#" class="instagram"><i class="fa fa-instagram fa-lg"></i></a></li>
-		<li><a href="#" class="youtube"><i class="fa fa-youtube-play fa-lg"></i></a></li>
-		<li><a href="#" class="pinterest"><i class="fa fa-pinterest fa-lg"></i></a></li>
-	</ul>
-</div>
-</footer>
 <footer id="footer_banner">
 <div id="footer_banner_wrap">
-	&#169; Copyright Arctic 2013
+	&#169; 2014 - Luis Eduardo Brito - Todos os direitos reservados
 </div>
 </footer>
 </section>
@@ -145,5 +133,14 @@
 <script src="js/controllers.js"></script>
 <script src="js/services.js"></script>
 <script src="js/directives.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=262081280620973";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

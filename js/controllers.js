@@ -8,6 +8,8 @@ resumeControllers.controller("HomeCtrl", [
 
 		// Firebase bindings
 		var articlesRef = new Firebase("https://luiseduardobrito.firebaseio.com/articles");
+		articlesRef
+
 		$scope.articles = $firebase(articlesRef);
 
 		// Tags management
@@ -42,7 +44,6 @@ resumeControllers.controller("HomeCtrl", [
 			for(var i = 0; i < newTags.length; i++)
 				$scope.addTag(newTags[i])
 		});
-
 	}
 ])
 
