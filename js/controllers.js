@@ -28,7 +28,11 @@ resumeControllers.controller("HomeCtrl", [
 
 		// MarkDown Converter
 		$scope.mdToHtml = function(text) {
+
 			var converter = new Markdown.Converter();
+			Markdown.Extra.init(converter, {highlighter: "prettify"});
+
+			window.prettyPrint();
 			return converter.makeHtml(text);
 		}
 

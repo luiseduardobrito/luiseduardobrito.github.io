@@ -36,11 +36,11 @@
 
         <!-- Post Media Image -->
         <div ng-if="article.image" class="post_type" id="photo"></div>
-        <img ng-if="article.image" ng-src="article.image" alt="article.title"/>
+        <img ng-if="article.image" ng-src="{{ article.image }}" alt="article.title"/>
 
         <!-- Post Media Video -->
         <div ng-if="article.video" class="post_type" id="video"></div>
-        <div ng-if="article.video" ng-model="article.video"></div>
+        <div ng-if="article.video" ng-bind-html="{{ article.video }}"></div>
 
     </section>
 
