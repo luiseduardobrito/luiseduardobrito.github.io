@@ -36,7 +36,8 @@
 
                 <p>&nbsp;</p>
 
-                <input type="button" ng-click="create()" value="Create" class="contact_button" />
+                <input ng-if="update" type="button" ng-click="save()" value="Update" class="contact_button" />
+                <input ng-if="!update" type="button" ng-click="create()" value="Create" class="contact_button" />
                 
             </form>
             

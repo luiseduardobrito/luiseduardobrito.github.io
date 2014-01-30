@@ -91,7 +91,35 @@ resumeControllers.controller("CreatePostCtrl", [
 
 		$scope.create = function(){
 			$articles.create($scope.post, function(){
-				$location.path('admin');
+				$location.path('');
+			})
+		}
+	}
+])
+
+resumeControllers.controller("EditPostCtrl", [
+
+	'$scope', '$routeParams', 'articles', '$location',
+
+	function($scope, $routeParams, $articles, $location) {
+
+		$scope.update = true;
+
+		$scope.getSingleArticle = function(){
+			return $articles.getById($routeParams.id);
+		}
+
+		$scope.$watch('getSingleArticle()', function(item) {
+
+			if(item) {
+				$scope.post = item;
+				$scope.post.tags = $scope.post.tags.join(' ')
+			}
+		});
+
+		$scope.save = function(){
+			$articles.update($routeParams.id, $scope.post, function(){
+				$location.path('');
 			})
 		}
 	}

@@ -13,7 +13,9 @@ resumeServices.factory('articles',
 
 		_this.ref = null;
 		_this.articlesBind = null;
+		
 		_this.articlesList = {};
+		_this.articlesReference = {};
 
 		_this.articles = [];
 
@@ -23,15 +25,16 @@ resumeServices.factory('articles',
 			_this.articlesBind = $firebase(_this.ref);
 
 			_this.articlesBind.$on("child_added", function(child) {
-				_this.childAddCallback(child.snapshot.value);
+				_this.childAddCallback(child.snapshot.value, child.snapshot.name);
 			})
 
 			return _public;
 		};
 
-		_this.childAddCallback = function(article) {
+		_this.childAddCallback = function(article, reference) {
 
 			_this.articlesList[article.id] = article;
+			_this.articlesReference[article.id] = reference;
 
 			_this.articles = [];
 
@@ -57,6 +60,21 @@ resumeServices.factory('articles',
 			post.tags = post.tags.split(' ')
 
 			_this.articlesBind.$add(post);
+
+			fn();
+		}
+
+		_public.update = function(id, post, fn) {
+
+			fn = fn || function(){};
+
+			if(!_this.articlesReference[id])
+				throw new Error("No article reference found with that ID in Firebase");
+
+			post.tags = post.tags.split(' ')
+
+			var child = _this.articlesBind.$child(_this.articlesReference[id]);
+			child.$set(post);
 
 			fn();
 		}

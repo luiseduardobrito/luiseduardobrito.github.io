@@ -16,17 +16,21 @@ resumeApp.config(['$routeProvider', '$locationProvider',
 				templateUrl: 'partials/home.html',
 				controller: 'HomeCtrl'        
 			})
-			.when('/post/:id', {
-				templateUrl: 'partials/single_post.html',
-				controller: 'SinglePostCtrl'
-			})
 			.when('/contact', {
 				templateUrl: 'partials/contact.html',
 				controller: 'ContactCtrl'
 			})
-			.when('/admin/post', {
+			.when('/post/create', {
 				templateUrl: 'partials/create_post.html',
 				controller: 'CreatePostCtrl'
+			})
+			.when('/post/:id', {
+				templateUrl: 'partials/single_post.html',
+				controller: 'SinglePostCtrl'
+			})
+			.when('/post/:id/edit', {
+				templateUrl: 'partials/create_post.html',
+				controller: 'EditPostCtrl'
 			})
 			.otherwise({
 				redirectTo: '/not_found'

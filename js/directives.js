@@ -38,8 +38,6 @@ resumeDirectives.directive('markdownEditor', function() {
                 }*/
             }
             
-            
-            
             var editor = new EpicEditor(opts);
             
             editor.load(function () {
@@ -63,6 +61,22 @@ resumeDirectives.directive('markdownEditor', function() {
                         scope.$apply();
                     }
                 }); // eo blur
+            });
+            
+            var isFirst = true;
+
+            // wait for model change
+            scope.$watch(function(){
+
+                return ngModel.$modelValue;
+
+            }, function(modelValue){
+
+                if(modelValue && modelValue.length && isFirst) {
+                    
+                    isFirst = false;
+                    editor.importFile(null, modelValue);
+                }
             });
             
             // parent -> local scope change
