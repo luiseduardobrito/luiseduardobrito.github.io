@@ -40,21 +40,12 @@
 			<i class="fa fa-bars"></i> MENU
 		</div>
 		<!-- Nav Bar (LEFT) -->
-		<nav>
+		<nav ng-controller="MenuCtrl">
 			<ul>
-				<li><a href="index.html" class="nav_link" id="nav_current" title="Home">Home</a></li>
-				<li><a href="#!/contact" class="nav_link" title="Contact">Contact</a></li>
+
+				<li><a href="index.html" class="nav_link" id="{{ getMenuStatus('/') }}" title="Home">Blog</a></li>
+				<li><a href="#!/contact" class="nav_link" id="{{ getMenuStatus('/contact') }}" title="Contact">Contato</a></li>
 			</ul>
-		</nav>
-		<!-- Responsive Layout Only -->
-		<nav>
-		<div class="navigation_title">
-			<i class="fa fa-info"></i>Other
-		</div>
-		<ul>
-			<li><a href="#" class="nav_link_other" title="New Blog Post">New Blog Post</a></li>
-			<li><a href="#" class="nav_link_other" title="Social Media">Social Media</a></li>
-		</ul>
 		</nav>
 	</div>
 </div>

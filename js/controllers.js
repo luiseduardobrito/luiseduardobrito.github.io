@@ -61,6 +61,21 @@ resumeControllers.controller("ContactCtrl", [
 	}
 ])
 
+resumeControllers.controller("MenuCtrl", [
+
+	'$scope', '$location', 
+
+	function($scope, $location) {
+
+		$scope.getMenuStatus = function(p) {
+			if($location.path() == p)
+				return 'nav_current'
+			else
+				return 'nav'
+		}
+	}
+])
+
 resumeControllers.controller("SinglePostCtrl", [
 
 	'$scope', '$routeParams', 'articles',
