@@ -16,6 +16,10 @@ resumeApp.config(['$routeProvider', '$locationProvider',
 				templateUrl: 'partials/home.html',
 				controller: 'HomeCtrl'        
 			})
+			.when('/post/:id', {
+				templateUrl: 'partials/single_post.html',
+				controller: 'SinglePostCtrl'
+			})
 			.when('/contact', {
 				templateUrl: 'partials/contact.html',
 				controller: 'ContactCtrl'

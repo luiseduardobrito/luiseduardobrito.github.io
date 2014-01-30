@@ -2,32 +2,24 @@ var resumeControllers = angular.module("resumeApp.controllers", []);
 
 resumeControllers.controller("HomeCtrl", [
 
-	'$scope', '$firebase', 
+	'$scope', 'articles',
 
-	function($scope, $firebase) {
+	function($scope, $articles) {
 
-		// Firebase bindings
-		var articlesRef = new Firebase("https://luiseduardobrito.firebaseio.com/articles");
-		articlesRef
-
-		$scope.articles = $firebase(articlesRef);
-
-		// Tags management
-
-		// TODO: sort tags by post count
-		$scope.tags = [];
-
-		$scope.addTag = function(tag) {
-
-			for(var i = 0; i < $scope.tags; i++)
-				if($scope.tags[i] == tag)
-					return;
-
-			$scope.tags.push(tag);
+		$scope.getArticles = function(){
+			return $articles.get();
 		}
+
+		$scope.$watch('getArticles()', function(list) {
+			$scope.articles = list;
+		})
 
 		// MarkDown Converter
 		$scope.mdToHtml = function(text) {
+
+			// find linebreak
+			text = text.split('{{ln_break}}');
+			text = text.length ? text[0] : text;
 
 			var converter = new Markdown.Converter();
 			Markdown.Extra.init(converter, {highlighter: "prettify"});
@@ -39,15 +31,6 @@ resumeControllers.controller("HomeCtrl", [
 		$scope.fromNow = function(timestamp) {
 			return moment(timestamp).fromNow();
 		}
-
-		$scope.articles.$on('child_added', function(child) {
-
-			var article = child.snapshot.value;
-			var newTags = article.tags;
-
-			for(var i = 0; i < newTags.length; i++)
-				$scope.addTag(newTags[i])
-		});
 	}
 ])
 
@@ -60,31 +43,56 @@ resumeControllers.controller("ContactCtrl", [
 	}
 ])
 
+resumeControllers.controller("SinglePostCtrl", [
+
+	'$scope', '$routeParams', 'articles',
+
+	function($scope, $routeParams, $articles) {
+
+		$scope.getSingleArticle = function(){
+			return $articles.getById($routeParams.id);
+		}
+
+		$scope.$watch('getSingleArticle()', function(item) {
+			$scope.article = item;
+		});
+
+		// MarkDown Converter
+		$scope.mdToHtml = function(text) {
+
+			if(!text || !text.length)
+				return '';
+
+			// find linebreak
+			text = text.split('{{ln_break}}').join('\n\n');
+
+			var converter = new Markdown.Converter();
+			Markdown.Extra.init(converter, {highlighter: "prettify"});
+
+			window.prettyPrint();
+			return converter.makeHtml(text);
+		}
+
+		$scope.fromNow = function(timestamp) {
+			return moment(timestamp).fromNow();
+		}
+	}
+])
+
 resumeControllers.controller("CreatePostCtrl", [
 
-	'$scope', '$firebase', 
+	'$scope', 'articles', '$location',
 
-	function($scope, $firebase) {
-
-		// Firebase bindings
-		var articlesRef = new Firebase("https://luiseduardobrito.firebaseio.com/articles");
-		$scope.articles = $firebase(articlesRef);
+	function($scope, $articles, $location) {
 
 		$scope.post = {
 			type: "text"
-		};
+		}
 
-		// create a post
 		$scope.create = function(){
-
-			// current date
-			$scope.post.time = (new Date());
-
-			// post tags
-			$scope.post.tags = $scope.post.tags.split(' ')
-
-			// add post to scope
-			$scope.articles.$add($scope.post);
+			$articles.create($scope.post, function(){
+				$location.path('admin');
+			})
 		}
 	}
 ])

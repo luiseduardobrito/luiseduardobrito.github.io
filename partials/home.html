@@ -28,15 +28,14 @@
     </nav>
 </div>
 
-<!-- Post #1 -->
-<article class="post" ng-repeat="article in articles">
+<article class="post" ng-repeat="article in articles | orderBy:'-id' | limitTo: 10">
 
     <!-- Post Media - Single Image -->
     <section class="post_media" ng-if="article.type == 'image' || article.type == 'video'">
 
         <!-- Post Media Image -->
         <div ng-if="article.image" class="post_type" id="photo"></div>
-        <img ng-if="article.image" ng-src="{{ article.image }}" alt="article.title"/>
+        <img ng-if="article.image" ng-src="{{ article.image }}" alt="{{ article.title }}"/>
 
         <!-- Post Media Video -->
         <div ng-if="article.video" class="post_type" id="video"></div>
@@ -51,7 +50,7 @@
         <header class="post_header">
 
             <!-- Post Title -->
-            <div class="post_title"><a href="post_image.html">{{ article.title }}</a></div>
+            <div class="post_title"><a ng-href="#!/post/{{ article.id }}">{{ article.title }}</a></div>
 
             <!-- Post Header -->
             <div class="post_date">{{ fromNow(article.time) }}</div>
@@ -61,7 +60,6 @@
         <!-- Post Body -->
         <div class="post_body">
             <p ng-bind-html="mdToHtml(article.content)"></p>
-            <p>&nbsp;</p>
         </div>
 
         <!-- Post Footer -->
