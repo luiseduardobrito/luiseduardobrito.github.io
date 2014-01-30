@@ -31,6 +31,24 @@ resumeControllers.controller("HomeCtrl", [
 		$scope.fromNow = function(timestamp) {
 			return moment(timestamp).fromNow();
 		}
+
+		$scope.share = function(article) {
+
+			var text = article.content;
+
+			text = text.split('{{ln_break}}');
+			text = text.length ? text[0] : text;
+
+			FB.ui({
+				method: 'feed',
+				name: article.title + ' - Luís Eduardo Brito',
+				link: 'http://luiseduardobrito.github.io/#!/post/' + article.id,
+				picture: 'http://luiseduardobrito.github.io/images/icon.jpg',
+				caption: 'Blog de TI, Web e Desenvolvimento',
+				description: text,
+				message: ''
+			});
+  		}
 	}
 ])
 
@@ -76,6 +94,24 @@ resumeControllers.controller("SinglePostCtrl", [
 		$scope.fromNow = function(timestamp) {
 			return moment(timestamp).fromNow();
 		}
+
+		$scope.share = function() {
+
+			var text = $scope.article.content;
+
+			text = text.split('{{ln_break}}');
+			text = text.length ? text[0] : text;
+
+			FB.ui({
+				method: 'feed',
+				name: $scope.article.title + ' - Luís Eduardo Brito',
+				link: 'http://luiseduardobrito.github.io/#!/post/' + $scope.article.id,
+				picture: 'http://luiseduardobrito.github.io/images/icon.jpg',
+				caption: 'Blog de TI, Web e Desenvolvimento',
+				description: text,
+				message: ''
+			});
+  		}
 	}
 ])
 
