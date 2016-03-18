@@ -2,7 +2,7 @@
 title: Luis Eduardo Brito
 description: CTO & Co-Founder @ Devnup
 email: hello@luiseduardobrito.me
-baseurl: /
+baseurl: 
 url: "http://luiseduardobrito.me" # the base hostname & protocol for your site
 #favicon
 favicon: /favicon.png
