@@ -1,44 +1,61 @@
-# Site settings
-title: Luis Eduardo Brito
-description: CTO & Co-Founder @ Devnup
-email: hello@luiseduardobrito.me
-baseurl: 
-url: "http://luiseduardobrito.me" # the base hostname & protocol for your site
-#favicon
-favicon: /favicon.png
+# Dependencies
+markdown:	kramdown
+# Permalinks
+permalink:	/blog/:title
 
-#feed
-feedburner_username:
-#twitter
-twitter_username:
-github_username:  luiseduardobrito
+# Setup
+title:            Luís Eduardo Brito
+tagline:          'blog'
+description:      'My personal blog.'
+url:              http://luiseduardobrito.me
+baseurl:
+commentsystem:    google
+disqus:           example
 
-#linkedin
-linkedin_username:
+author:
+  name:           Luís Eduardo Brito
+  url:            http://luiseduardobrito.me
 
-#google analytics
-google_analytics_id :
-#gplus
-gplus_username:
+paginate:         5
 
-#fb_username
-fb_username: luiseduardo14
+# Custom vars
+icon:             /assets/images/icon.png
+cover:            /assets/images/cover.jpg
 
-#permalink /blog/2014/11/11/this-is-a-sample-post
-permalink: /blog/:year/:month/:day/:title
-# Build settings
-markdown: kramdown
+social:
+#  - icon:         twitter
+#    url:          https://twitter.com/iancamporez
+#    desc:         Follow me on twitter
 
-#Disqus configuration
-disqus_short_name:
-disqus_show_comment_count:
+  - icon:         github
+    url:          https://github.com/luiseduardobrito
+    desc:         Fork me on github
 
-#Can be used for multiple author blogs ! Add name to post For more visit the sample
-authors:
-  luis:
-    display_name: Luís Eduardo Brito
-    email: hello@luiseduardobrito.me
-    fb: luiseduardo14
-    linkedin:
-    twitter:
-    github: luiseduardobrito
+#  - icon:         googleplus-alt
+#    url:          https://google.com/+IanCamporezBrunelli
+#    desc:         Add me on google+
+
+  - icon:         feed
+    url:          http://luiseduardobrito.me/atom.xml
+    desc:         RSS
+
+menu:
+  - title:        Home
+    url:          /
+
+  - title:        About
+    url:          /about
+
+copyright:
+  author:         Luis Eduardo Brito
+  url:            http://luiseduardobrito.me
+  type_title:     Some rights reserved
+  type_url:       http://creativecommons.org/licenses/by-nc/2.5
+
+parallax:         false
+
+# Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
+google_analytics:
+
+# Default Theme Color for Chrome on Android Lollipop (Use RGB ColorCode without `#`, e.g.: `db5945`)
+theme_color:       7E9576
