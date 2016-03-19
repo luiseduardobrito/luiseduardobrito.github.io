@@ -7,14 +7,16 @@ permalink:	/blog/:title
 title:            Luís Eduardo Brito
 tagline:          'blog'
 description:      'My personal blog.'
-url:              http://luiseduardobrito.me
+url:              https://luiseduardobrito.me   # with the https protocol
+enforce_ssl:      luiseduardobrito.me   # without any protocol
+
 baseurl:
 commentsystem:    google
 disqus:           example
 
 author:
   name:           Luís Eduardo Brito
-  url:            http://luiseduardobrito.me
+  url:            https://luiseduardobrito.me
 
 paginate:         5
 
@@ -36,7 +38,7 @@ social:
 #    desc:         Add me on google+
 
   - icon:         feed
-    url:          http://luiseduardobrito.me/atom.xml
+    url:          https://luiseduardobrito.me/atom.xml
     desc:         RSS
 
 menu:
@@ -48,7 +50,7 @@ menu:
 
 copyright:
   author:         Luis Eduardo Brito
-  url:            http://luiseduardobrito.me
+  url:            https://luiseduardobrito.me
   type_title:     Some rights reserved
   type_url:       http://creativecommons.org/licenses/by-nc/2.5
 
