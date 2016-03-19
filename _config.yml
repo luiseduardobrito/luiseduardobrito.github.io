@@ -7,8 +7,8 @@ permalink:	/blog/:title
 title:            Luís Eduardo Brito
 tagline:          'blog'
 description:      'My personal blog.'
-url:              https://luiseduardobrito.me   # with the https protocol
-enforce_ssl:      luiseduardobrito.me   # without any protocol
+url:              https://luiseduardobrito.me
+enforce_ssl:      luiseduardobrito.me
 
 baseurl:
 commentsystem:    google
