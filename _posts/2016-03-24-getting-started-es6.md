@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How we got started with ES6 at Devnup"
-quote: "We work with a lot of Node.JS APIs in [Devnup](https://devnup.solutions) and this year we started using some [*harmony features [ref]*](#) from the new Node.JS v5.6+ in a Social Dating project, mainly in the Backend services. When I presented to the team our goals in this approach, I focused in the *Object-Oriented* goodies from the new EcmaScript 2015 (ES6), specially the **Modules and Classes**. The main references in our study are listed in the end of this article, so you can follow our steps."
+quote: "We work with a lot of Node.JS APIs in Devnup and this year we started using some harmony features from the new Node.JS v5.6+ in a Social Dating project, mainly in the Backend services. When I presented to the team our goals in this approach, I focused in the Object-Oriented goodies from the new EcmaScript 2015 (ES6), specially the Modules and Classes."
 image: false
 video: false
 comments: true
