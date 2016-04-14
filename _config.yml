@@ -6,7 +6,7 @@ permalink:	/blog/:title
 # Setup
 title:            Luís Eduardo Brito
 tagline:          'blog'
-description:      'My personal blog.'
+description:      'Tech blog and coding journal'
 url:              https://luiseduardobrito.me
 enforce_ssl:      luiseduardobrito.me
 
@@ -54,7 +54,7 @@ copyright:
   type_title:     Some rights reserved
   type_url:       http://creativecommons.org/licenses/by-nc/2.5
 
-parallax:         false
+parallax:         true
 
 # Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
 google_analytics:

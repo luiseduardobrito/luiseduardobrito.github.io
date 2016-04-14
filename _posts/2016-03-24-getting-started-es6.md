@@ -15,7 +15,7 @@ If you're working in the Server Side, this might be the easiest part of your jou
 
 Starting by the ```package.json```, projects that use containers such as the Heroku Cedar, Docker or similar technologies may have to specify the engine that will be used.
 
-```json
+```
 {
   "name": "myapp",
   "description": "a really cool app",
@@ -29,7 +29,7 @@ Starting by the ```package.json```, projects that use containers such as the Her
 For DevOps safety concerns, we also wrote a simple tool to check the current version of the engine before starting the API. The first lines of our min script as reproduced below:
 
 
-```javascript
+```
 var pkg = require('./package.json');
 var EngineUtil = require('./lib/util/engine');
 
@@ -45,7 +45,7 @@ Let's start by remembering that **Javascript does not support classes like other
 
 Below is the new syntax to create classes, based on the *Sugar Syntax* introduced in the ES6. You will feel familiar to this way if you come from a Java background or other OO language.
 
-```javascript
+```
 class Project {
   constructor(name) {
     this.name = name;
