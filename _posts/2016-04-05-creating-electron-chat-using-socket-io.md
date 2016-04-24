@@ -9,7 +9,7 @@ dark: true
 comments: true
 ---
 
-[Electron]() is a great package, and to get started with it I created my first project based on the [Socket.io Example Chat](). The goal was to create a simple, yet powerful and globally distributed chat application with basic features, such as **connection** and **typing** states for the users.
+[Electron](http://electron.atom.io) is a great package, and to get started with it I created my first project based on the [Socket.io Example Chat](http://socket.io). The goal was to create a simple, yet powerful and globally distributed chat application with basic features, such as **connection** and **typing** states for the users.
 
 The Electron platform makes it easy to build the package for multiple operational systems, in this example we'll focus in the OSX and Windows binaries. I'll show you how I prepared my project to easily build new code changes to a OSX's DMG installer and a Windows Zip File (easily convertable to .exe using SFX).
 
@@ -25,9 +25,9 @@ All UI and graphical resources were openly available in amazing open source in t
 
 Based on the official example in the Socket.io Documentation, we can easily create a rich chat experience, with connectivity status of the participants and typing indicators, all in real time and with low amount of data handled.
 
-<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png" width="50%" alt="Mac OSX Chat Screenshot">
+<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png" width="40%" alt="Mac OSX Chat Screenshot">
 
-<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-win-screen.png" width="50%" alt="Windows Chat Screenshot">
+<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-win-screen.png" width="40%" alt="Windows Chat Screenshot">
 
 The Socket.io also have a lot of fallback pre-implemented in the platform, such as ```flashsocket````, ```htmlfile````, ```xhr-polling```` and ```jsonp-polling``` for browser-based clients.
 
