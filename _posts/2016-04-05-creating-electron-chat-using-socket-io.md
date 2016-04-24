@@ -63,6 +63,7 @@ Its structure is specified below:
 This project was created in NodeJS, based on the Github's Electron that powers the great Atom editor. This platform allows the developer to create a single *sort-of-web-based* project (HTML, CSS and JS), but with direct access to the NPM packages running natively using Chromium's V8 and WebKit.
 
 The NodeJS project dependencies are listed in the [package.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/package.json) file in the root, and they are explained below:
+
 ```
 - bower: Package manager for the browser-based dependencies,
 - electron-prebuilt: Pre-built platform for running the Electron applications
@@ -74,7 +75,9 @@ The NodeJS project dependencies are listed in the [package.json](https://github.
 - appdmg: DMG packager (Available only under OSX environments)
 ```
 
+
 The user interface has some Bower dependencies as well, all defined in the [bower.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/bower.json) file. They are listed below:
+
 ```
 - socket.io-client: Main socket client
 - angular: Main client framework
@@ -87,6 +90,7 @@ The user interface has some Bower dependencies as well, all defined in the [bowe
 - moment: Utility for handling
 ```
 
+
 All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies){:target="_blank"}.
 
 
@@ -97,9 +101,11 @@ The build system is based in NPM Scripts, defined in the [package.json](https://
 **Installing project dependencies**
 
 To start the build process, make sure you have all needed packages by running the command:
-```shell
+
+```
 npm install
 ```
+
 
 **Building the project binaries**
 
@@ -110,13 +116,14 @@ Now that you have all the project dependencies, run the *pack* command to create
 
 If you're running in an OSX platform you can run the shortcut ```npm run pack:all``` to build for both platforms at once.
 
+
 **Distributing the project packages (OSX)**
 
 After the build process you should be able to create a DMG file for OSX platforms using:
-```shell
+
+```
 npm run dist:darwin
 ```
-
 
 
 ## Download full source
