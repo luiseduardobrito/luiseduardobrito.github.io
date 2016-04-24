@@ -11,15 +11,10 @@ comments: true
 
 [Electron](http://electron.atom.io){:target="_blank"} is a great package, and to get started with it I created my first project based on the [Socket.io Example Chat](http://socket.io){:target="_blank"}. The goal was to create a simple, yet powerful and globally distributed chat application with basic features, such as **connection** and **typing** states for the users.
 
-The Electron platform makes it easy to build the package for multiple operational systems, in this example we'll focus in the OSX and Windows binaries. I'll show you how I prepared my project to easily build new code changes to a OSX's DMG installer and a Windows Zip File (easily convertable to .exe using SFX).
+The Electron platform makes it easy to build the package for multiple operational systems, but in this example we'll focus only in the OSX and Windows binaries. I'll show you how I prepared my project to easily build new code changes to a OSX's DMG installer and a Windows Zip File (easily convertable to .exe using SFX).
 
 You can checkout the full result and the binaries in the [GitHub repository](https://github.com/luiseduardobrito/sample-chat-electron){:target="_blank"} (don't forget to star it if you really liked)
 
-## Project Dependencies
-
-This project was created in NodeJS, based on the Github's Electron that powers the great Atom editor. This platform allows the developer to create a single *sort-of-web-based* project (HTML, CSS and JS), but with direct access to the NPM packages running natively using Chromium's V8 and WebKit.
-
-All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies){:target="_blank"}.
 
 ## Features
 
@@ -61,6 +56,68 @@ Its structure is specified below:
 - server/           .........   NodeJS non-graphical web server for hosting a room.
 
 ```
+
+
+## Project Dependencies
+
+This project was created in NodeJS, based on the Github's Electron that powers the great Atom editor. This platform allows the developer to create a single *sort-of-web-based* project (HTML, CSS and JS), but with direct access to the NPM packages running natively using Chromium's V8 and WebKit.
+
+The NodeJS project dependencies are listed in the [package.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/package.json) file in the root, and they are explained below:
+```
+- bower: Package manager for the browser-based dependencies,
+- electron-prebuilt: Pre-built platform for running the Electron applications
+- electron-rebuild: Module for building the Electron application
+- electron-packager: Module for creating packages for the Electron applications
+- express: Web server for the chat.
+- socket.io: Socket server for the chat.
+- hat: Utility for generating unique session ids
+- appdmg: DMG packager (Available only under OSX environments)
+```
+
+The user interface has some Bower dependencies as well, all defined in the [bower.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/bower.json) file. They are listed below:
+```
+- socket.io-client: Main socket client
+- angular: Main client framework
+- angular-route": Main client router
+- ngstorage: Session manager for the client
+- angular-socket-io: Socket client integration for AngularJS
+- jquery": User interface dependency
+- jquery.nicescroll": User interface dependency
+- smalltalk: Nice alerts and prompt for the client
+- moment: Utility for handling
+```
+
+All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies){:target="_blank"}.
+
+
+## Creating binary packages
+
+The build system is based in NPM Scripts, defined in the [package.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/package.json) file in the root. The outputs will be placed in the ```build/``` directory.
+
+**Installing project dependencies**
+
+To start the build process, make sure you have all needed packages by running the command:
+```shell
+npm install
+```
+
+**Building the project binaries**
+
+Now that you have all the project dependencies, run the *pack* command to create your binaries.
+
+- Mac OSX (.app): ```$ npm run pack:darwin```
+- Windows (.zip): ```$ npm run pack:win32```
+
+If you're running in an OSX platform you can run the shortcut ```npm run pack:all``` to build for both platforms at once.
+
+**Distributing the project packages (OSX)**
+
+After the build process you should be able to create a DMG file for OSX platforms using:
+```shell
+npm run dist:darwin
+```
+
+
 
 ## Download full source
 
