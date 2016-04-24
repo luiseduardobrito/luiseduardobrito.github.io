@@ -2,7 +2,8 @@
 layout: post
 title: "Creating an Electron chat using Socket.io"
 quote: ""
-image: "/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png"
+image:
+      url: /media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png
 video: false
 comments: true
 ---
