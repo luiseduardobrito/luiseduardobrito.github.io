@@ -9,17 +9,17 @@ dark: true
 comments: true
 ---
 
-[Electron](http://electron.atom.io) is a great package, and to get started with it I created my first project based on the [Socket.io Example Chat](http://socket.io). The goal was to create a simple, yet powerful and globally distributed chat application with basic features, such as **connection** and **typing** states for the users.
+[Electron](http://electron.atom.io){:target="_blank"} is a great package, and to get started with it I created my first project based on the [Socket.io Example Chat](http://socket.io){:target="_blank"}. The goal was to create a simple, yet powerful and globally distributed chat application with basic features, such as **connection** and **typing** states for the users.
 
 The Electron platform makes it easy to build the package for multiple operational systems, in this example we'll focus in the OSX and Windows binaries. I'll show you how I prepared my project to easily build new code changes to a OSX's DMG installer and a Windows Zip File (easily convertable to .exe using SFX).
 
-You can checkout the full result and the binaries in the [GitHub repository](https://github.com/luiseduardobrito/sample-chat-electron) (don't forget to star it if you really liked)
+You can checkout the full result and the binaries in the [GitHub repository](https://github.com/luiseduardobrito/sample-chat-electron){:target="_blank"} (don't forget to star it if you really liked)
 
 ## Project Dependencies
 
 This project was created in NodeJS, based on the Github's Electron that powers the great Atom editor. This platform allows the developer to create a single *sort-of-web-based* project (HTML, CSS and JS), but with direct access to the NPM packages running natively using Chromium's V8 and WebKit.
 
-All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies).
+All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies){:target="_blank"}.
 
 ## Features
 
@@ -62,9 +62,15 @@ Its structure is specified below:
 
 ```
 
+## Download full source
+
+The full source and docs are available in the GitHub repository. You can download the latest source directly from the repository using the link below:
+
+- [Download full source (zip)](https://github.com/luiseduardobrito/sample-chat-electron/archive/master.zip){:target="_blank"}
+
 ## Download binaries
 
 To easily test it now using the [public server hosted in Heroku](https://radiant-river-70847.herokuapp.com/api){:target="_blank"}, just grab these pre-built binaries:
 
-- [Sample Chat for Mac OSX (.dmg)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.dmg?raw=true)
-- [Sample Chat for Windows (.zip)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.zip?raw=true)
+- [Sample Chat for Mac OSX (.dmg)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.dmg?raw=true){:target="_blank"}
+- [Sample Chat for Windows (.zip)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.zip?raw=true){:target="_blank"}
