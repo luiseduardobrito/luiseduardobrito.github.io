@@ -111,10 +111,23 @@ npm install
 
 Now that you have all the project dependencies, run the *pack* command to create your binaries.
 
-- Mac OSX (.app): ```$ npm run pack:darwin```
-- Windows (.zip): ```$ npm run pack:win32```
+- Mac OSX (.app):
 
-If you're running in an OSX platform you can run the shortcut ```npm run pack:all``` to build for both platforms at once.
+```
+npm run pack:darwin
+```
+
+- Windows (.zip):
+
+```
+npm run pack:win32
+```
+
+If you're running in an OSX platform you can run the shortcut *pack:all* to build for both platforms at once.
+
+```
+npm run pack:all
+```
 
 
 **Distributing the project packages (OSX)**
