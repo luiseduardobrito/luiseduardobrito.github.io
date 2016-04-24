@@ -64,7 +64,7 @@ Its structure is specified below:
 
 ## Download full source
 
-The full source and docs are available in the GitHub repository. You can download the latest source directly from the repository using the link below:
+The full source and docs are available in the [GitHub repository](https://github.com/luiseduardobrito/sample-chat-electron){:target="_blank"}. You can download the latest source directly from the repository using the link below:
 
 - [Download full source (zip)](https://github.com/luiseduardobrito/sample-chat-electron/archive/master.zip){:target="_blank"}
 
