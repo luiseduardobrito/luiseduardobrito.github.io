@@ -24,14 +24,14 @@ All UI and graphical resources were openly available in amazing open source in t
 ## Project Structure
 
 ```
-- build/            ..........  Build system output, binaries for OSX (dmg) and Windows (zip).
+- build/            ..........  Binaries for OSX (dmg) and Windows (zip).
 
 - client/           ..........  Client AngularJS application based on Electron.
 - - app/            ..........  Root AngularJS directory.
 - - - controllers/  ..........  AngularJS controllers directory.
 - - - services/     ..........  AngularJS services directory.
 - - - views/        ..........  AngularJS views directory.
-- - - default.js    ..........  Default constants and settings for the AngularJS application.
+- - - default.js    ..........  Default settings for the AngularJS application.
 - - - main.js       ..........  The main AngularJS application definition.
 - - css/            ..........  Stylesheets for the client application.
 - - index.html      ..........  The main chat HTML document.
@@ -41,8 +41,8 @@ All UI and graphical resources were openly available in amazing open source in t
 - - default.json    ..........  Default configurations for the Electron application.
 - - menu.js         ..........  The main menu for the Electron application.
 
-- docs/             ..........  Technical reference of the Socket interface for client and server.
+- docs/             ..........  Technical reference of the socket interfaces.
 
-- server/           .........   NodeJS non-graphical web server for handling the socket messages room.
+- server/           .........   NodeJS non-graphical web server for hosting a room.
 
 ```
