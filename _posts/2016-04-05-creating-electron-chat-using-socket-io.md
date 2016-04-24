@@ -5,6 +5,7 @@ quote: "Electron is a great package, and to get started with it I created my fir
 image:
       url: /media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png
 video: false
+dark: true
 comments: true
 ---
 
