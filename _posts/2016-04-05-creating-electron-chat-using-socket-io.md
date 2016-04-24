@@ -98,7 +98,7 @@ All UI and graphical resources were openly available in amazing open source in t
 
 The build system is based in NPM Scripts, defined in the [package.json](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/package.json) file in the root. The outputs will be placed in the ```build/``` directory.
 
-### Installing project dependencies
+#### Installing project dependencies
 
 To start the build process, make sure you have all needed packages by running the command:
 
@@ -107,7 +107,7 @@ npm install
 ```
 
 
-### Building the project binaries
+#### Building the project binaries
 
 Now that you have all the project dependencies, run the *pack* command to create your binaries.
 
@@ -130,7 +130,7 @@ npm run pack:all
 ```
 
 
-### Distributing the project packages (OSX)
+#### Distributing the project packages (OSX)
 
 After the build process you should be able to create a DMG file for OSX platforms using:
 
