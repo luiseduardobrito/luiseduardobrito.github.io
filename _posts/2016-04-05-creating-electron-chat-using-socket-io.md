@@ -64,7 +64,7 @@ Its structure is specified below:
 
 ## Download binaries
 
-To easily test it now using the [public server hosted in Heroku](https://radiant-river-70847.herokuapp.com/api), just grab these pre-built binaries:
+To easily test it now using the [public server hosted in Heroku](https://radiant-river-70847.herokuapp.com/api){:target="_blank"}, just grab these pre-built binaries:
 
 - [Sample Chat for Mac OSX (.dmg)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.dmg?raw=true)
 - [Sample Chat for Windows (.zip)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.zip?raw=true)
