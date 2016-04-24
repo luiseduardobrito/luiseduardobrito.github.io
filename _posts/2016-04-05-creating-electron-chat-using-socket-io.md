@@ -26,7 +26,6 @@ All UI and graphical resources were openly available in amazing open source in t
 Based on the official example in the Socket.io Documentation, we can easily create a rich chat experience, with connectivity status of the participants and typing indicators, all in real time and with low amount of data handled.
 
 <img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png" width="40%" alt="Mac OSX Chat Screenshot">
-
 <img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-win-screen.png" width="40%" alt="Windows Chat Screenshot">
 
 The Socket.io also have a lot of fallback pre-implemented in the platform, such as ```flashsocket````, ```htmlfile````, ```xhr-polling```` and ```jsonp-polling``` for browser-based clients.
