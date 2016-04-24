@@ -21,7 +21,22 @@ This project was created in NodeJS, based on the Github's Electron that powers t
 
 All UI and graphical resources were openly available in amazing open source in the Internet and are [credited in the project's README](https://github.com/luiseduardobrito/sample-chat-electron#open-source-dependencies).
 
+## Features
+
+Based on the official example in the Socket.io Documentation, we can easily create a rich chat experience, with connectivity status of the participants and typing indicators, all in real time and with low amount of data handled.
+
+<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-osx-screen.png" width="50%" alt="Mac OSX Chat Screenshot">
+
+<img src="/media/2016-04-05-creating-electron-chat-using-socket-io/sample-chat-win-screen.png" width="50%" alt="Windows Chat Screenshot">
+
+The Socket.io also have a lot of fallback pre-implemented in the platform, such as ```flashsocket````, ```htmlfile````, ```xhr-polling```` and ```jsonp-polling``` for browser-based clients.
+
+
 ## Project Structure
+
+All code needed to testing is bundled in the same repository for educational purposes, both the client and the server.
+
+Its structure is specified below:
 
 ```
 - build/            ..........  Binaries for OSX (dmg) and Windows (zip).
@@ -46,3 +61,10 @@ All UI and graphical resources were openly available in amazing open source in t
 - server/           .........   NodeJS non-graphical web server for hosting a room.
 
 ```
+
+## Download binaries
+
+To easily test it now using the [public server hosted in Heroku](https://radiant-river-70847.herokuapp.com/api), just grab these pre-built binaries:
+
+- [Sample Chat for Mac OSX (.dmg)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.dmg?raw=true)
+- [Sample Chat for Windows (.zip)](https://github.com/luiseduardobrito/sample-chat-electron/blob/master/build/SampleChat.zip?raw=true)
