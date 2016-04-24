@@ -61,3 +61,10 @@ project.start(); // "Project Journal starting"
 ```
 
 All the methods you declare in a class will be added to the prototype of the class.
+
+For more information, check out these awesome resources that helped us a lot:
+
+- [Classes Reference (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Learn ES2015 (Babel)](https://babeljs.io/docs/learn-es2015/)
+- [ES6 Learning Guide (by ericdouglas)](https://github.com/ericdouglas/ES6-Learning)
+- [ECMAScript 6 support in Mozilla (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)
