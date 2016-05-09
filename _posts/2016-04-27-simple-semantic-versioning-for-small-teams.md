@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Simple Semantic Versioning for small teams"
-quote: ""
+quote: "In the world of software management there exists a dread place called “dependency hell.” The bigger your system grows and the more packages you integrate into your software, the more likely you are to find yourself, one day, in this pit of despair"
 video: false
-dark: true
+dark: false
 comments: true
 ---
 
